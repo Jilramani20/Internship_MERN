@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f0f2f5;
+  color: #333;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.app-header {
+  background: linear-gradient(135deg, #2c3e50, #3498db);
+  color: white;
+  text-align: center;
+  padding: 30px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.app-header h1 { font-size: 2rem; }
+.app-header p { opacity: 0.8; margin-top: 6px; }
+
+/* Form */
+.form-container {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  margin-bottom: 30px;
+}
+
+.form-container h2 {
+  margin-bottom: 16px;
+  color: #2c3e50;
+}
+
+.product-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.product-form input {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.product-form input:focus {
+  border-color: #3498db;
+}
+
+.btn-add {
+  padding: 10px 24px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-add:hover { background: #2980b9; }
+
+/* Products */
+.products-section h2 {
+  margin-bottom: 16px;
+  color: #2c3e50;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.card-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Card Component */
+.card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+
+.card:hover { transform: translateY(-4px); }
+
+.card-header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  padding: 16px;
+  color: white;
+}
+
+.category-badge {
+  background: rgba(255,255,255,0.2);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.product-name {
+  margin-top: 10px;
+  font-size: 1.1rem;
+}
+
+.card-body { padding: 16px; }
+
+.description {
+  color: #666;
+  font-size: 13px;
+  margin-bottom: 12px;
+  min-height: 36px;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #27ae60;
+}
+
+.btn-delete {
+  padding: 8px;
+  background: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background 0.2s;
+}
+
+.btn-delete:hover { background: #c0392b; }
+
+/* Status Messages */
+.status-msg {
+  text-align: center;
+  padding: 20px;
+  color: #666;
+  font-size: 15px;
+}
+
+.status-msg.error { color: #e74c3c; }
